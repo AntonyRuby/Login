@@ -28,7 +28,7 @@ class Email extends StatelessWidget {
                 borderSide: BorderSide(color: Colors.grey[400])),
             enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: Colors.grey[400])),
-            labelText: referral ? "Referral Code (Optional)" : "Email",
+            labelText: referral ? "Referral Code (Optional)" : "Email ID",
             floatingLabelBehavior: FloatingLabelBehavior.always),
         validator: (value) {
           return EmailValidator.validate(value) ? null : "Invalid email";
