@@ -36,18 +36,23 @@ class _ReferralState extends State<Referral> {
   }
 }
 
-class ReferralCode extends StatelessWidget {
+class ReferralCode extends StatefulWidget {
   final Login login;
   ReferralCode({@required this.login});
 
-  final TextEditingController emailController = new TextEditingController();
+  @override
+  _ReferralCodeState createState() => _ReferralCodeState();
+}
+
+class _ReferralCodeState extends State<ReferralCode> {
+  TextEditingController emailController = new TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: Email(
+        child: new Email(
       emailController: emailController,
-      login: login,
+      login: widget.login,
       referral: true,
     ));
   }
